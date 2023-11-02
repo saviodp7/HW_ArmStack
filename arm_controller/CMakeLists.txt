@@ -134,8 +134,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/arm_controller_node.cpp)
-add_executable(arm_controller_node src/arm_controller_node.cpp)
-add_executable(arm_controller_pub src/arm_controller_pub.cpp)
+add_executable(${PROJECT_NAME}_node src/arm_controller_node.cpp)
 
 
 ## Rename C++ executable without prefix
@@ -152,8 +151,7 @@ add_executable(arm_controller_pub src/arm_controller_pub.cpp)
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-target_link_libraries(arm_controller_node ${catkin_LIBRARIES})
-target_link_libraries(arm_controller_pub ${catkin_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES})
 
 #############
 ## Install ##
